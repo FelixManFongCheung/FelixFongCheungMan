@@ -9,42 +9,75 @@
 <body>
     <div class="name">Felix's Portfolio</div>
     <section class="project-container dotted-basic">
-        <div class="project-title">Projects</div>
+        <div class="title">Projects</div>
 
         <div class="btn-group">
             <button data-project="ecommerce">[<span class="project-name">E-commerce website</span>]</button>
             <button data-project="ryanPortfolio">[<span class="project-name">Customised Art Portfolio</span>]</button>
             <button data-project="italiaArt">[<span class="project-name">Customised Art Project</span>]</button>
+            <button data-project="meshfirm">[<span class="project-name">Professional Work</span>]</button>
         </div>
-        <div class="content" id="ecommerce">
-            <p>
-                This a website made with Next.js v14, Stripe js and Zustand for the time being. 
-                Because of the attempt to move it to server-side rendered, the state managed by Zustand will be removed. 
-                The site is hosted on Vercel.
-            </p>
-            <a href="https://web-ecommerce-shop.vercel.app/" target="_blank" rel="noopener noreferrer">link</a>
-        </div>
-        <div class="content" id="ryanPortfolio">
-            <p>
-                This website uses React as the framework and Cloudinary as the CDN to store images of Ryan's works.
-                It is client-side rendered and uses SCSS for styling and Redux for state management.
-            </p>
-            <a href="https://lojunrui.com/" target="_blank" rel="noopener noreferrer">link</a>
-        </div>
-        <div class="content" id="italiaArt">
-            <p>
-                This is a static site made with plain HTML, CSS and JavaScript.
-                The effect is achieved by mounting and unmounting an array of preselected images by Italia. Opacity is used to control the fade-in-and-out effect. 
-                In addition, the carousel is infinite made with CSS.
-                The site is hosted on Render.
-            </p>
-            <a href="https://hcguirmehicogmhi45wuct98m4xf9cjhu8fhxmio.onrender.com" target="_blank" rel="noopener noreferrer">link</a>
-        </div>
-        <div class="mask"></div>
     </section>
     <section class="about-me-container dotted-basic">
-        <div class="about-me-title">About Me</div>
+        <div class="title">About Me</div>
+        <div class="about-me-content">
+            I am a self-taught software engineer with a passion for web development, AI implementation and creative coding. 
+            My blend of academic knowledge of data science and hands-on experience of full-stack web development has given me opportunities to make data-driven decisions and build products that are both functional and aesthetically pleasing. 
+            I recently finished my master's degree in Social Data Science at the University of Copenhagen and completed an internship at a startup company that has a focus on implementing AI solutions for product management.
+            I am currently looking for a job that allows me to work with AI, data and web with a touch of creativity. Don't hesitate to contact me. 
+        </div>
     </section>
+    <section class="contact-container dotted-basic">
+        <div class="title">Contact</div>
+        <div class="contact-content btn-group">
+            <a href="mailto:manfongcheung74@gmail.com" target="_blank" rel="noopener noreferrer">Email</a>
+            <a href="https://www.linkedin.com/in/felixmanfc24" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/FelixManFongCheung" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+    </section>
+    <div class="content" id="ecommerce">
+        <p>
+            This a website made with Next.js v14, Stripe js and Zustand for the time being. 
+            Because of the attempt to move it to server-side rendered, the state managed by Zustand will be removed. 
+            The site is hosted on Vercel.
+        </p>
+        <a href="https://web-ecommerce-shop.vercel.app/" target="_blank" rel="noopener noreferrer">link</a>
+    </div>
+    <div class="content" id="ryanPortfolio">
+        <p>
+            This website uses React as the framework and Cloudinary as the CDN to store images of Ryan's works.
+            It is client-side rendered and uses SCSS for styling and Redux for state management.
+        </p>
+        <a href="https://lojunrui.com/" target="_blank" rel="noopener noreferrer">link</a>
+    </div>
+    <div class="content" id="italiaArt">
+        <p>
+            This is a static site made with plain HTML, CSS and JavaScript.
+            The effect is achieved by mounting and unmounting an array of preselected images by Italia. Opacity is used to control the fade-in-and-out effect. 
+            In addition, the carousel is infinite made with CSS.
+            The site is hosted on Render.
+        </p>
+        <a href="https://hcguirmehicogmhi45wuct98m4xf9cjhu8fhxmio.onrender.com" target="_blank" rel="noopener noreferrer">link</a>
+    </div>
+    <div class="content" id="meshfirm">
+        <div class="description">
+            <p>
+                This is a website made with react and node.js as foundation and mutiple different tools involved tailor-made for AI specific use. For exmaple, flowise, pipedream and openai were used. 
+                Render is used as the hosting service and supabase is used as the database.
+                My key contribution is:
+            </p>
+            <ul>
+                <li>Implementation of OpenAI's Whisper API</li>
+                <li>Using Flowise to implement core logic of Sindre to access and post to Jira, Asana, Slack and Linear</li>
+                <li>Cron job in Google Cloud Platform using python</li>
+                <li>Cron job in Supabase using PostgreSQL</li>
+                <li>Pipedream for pipeline automation, e.g., conditional OAuth authentication</li>
+                <li>UI for the website</li>
+            </ul>
+        </div>
+        <a href="https://copilot.meshfirm.com" target="_blank" rel="noopener noreferrer">link</a>
+    </div>
+    <div class="mask"></div>
     <script type="text/javascript" src="/index.js"></script>
 </body>
 </html>

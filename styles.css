@@ -1,15 +1,14 @@
 * {
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
-    list-style: none;
     box-sizing: border-box;
-    overflow-x: hidden;
 }
 
 :root {
     --link-font-size: 3rem;
     --title-font-size: 4rem;
     --text-font-size: 3rem;
+    --list-font-size: 1rem;
 }
 
 html {
@@ -19,6 +18,10 @@ html {
 body {
     position: relative;
     margin: 0;
+}
+
+body.no-scroll {
+    overflow: hidden;
 }
 
 section, .name {
@@ -37,12 +40,7 @@ a:hover {
     font-style: italic;
 }
 
-.project-title {
-    font-size: var(--title-font-size);
-    margin-bottom: 2rem;
-}
-
-.name {
+.title, .name {
     font-size: var(--title-font-size);
     margin-bottom: 2rem;
 }
@@ -56,6 +54,7 @@ a:hover {
 
 .btn-group {
     display: flex;
+    font-size: var(--link-font-size);
     flex-direction: column;
 }
 
@@ -63,8 +62,35 @@ a:hover {
     font-style: italic;
 }
 
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: inherit;
+    cursor: pointer;
+    outline: none;
+    text-align: left;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: inherit;
+}   
+
+/* about me page */
+
+.about-me-container .about-me-content {
+    font-size: var(--text-font-size);
+}
+
+.content#meshfirm .description > ul li {
+    font-size: var(--list-font-size);
+    list-style-type: disc;
+    overflow: visible;
+}
+
 .content {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: -100%;
     width: 50%;
@@ -78,6 +104,7 @@ a:hover {
 
 .content.active {
     right: 0;
+    overflow-y: scroll;
 }
 
 .content a {
@@ -153,26 +180,4 @@ a:hover {
         justify-content: center; /* Horizontal center */
         font-size: var(--text-font-size);
     }
-}
-
-button {
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
-    outline: none;
-    text-align: left;
-    font-size: var(--link-font-size);
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    color: inherit;
-}   
-
-/* about me page */
-
-.about-me-title {
-    font-size: var(--title-font-size);
-    margin-bottom: 2rem;
 }
