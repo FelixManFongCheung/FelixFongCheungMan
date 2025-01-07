@@ -21,8 +21,10 @@ body {
     margin: 0;
 }
 
-section {
+section, .name {
     margin-bottom: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 a {
