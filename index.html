@@ -7,15 +7,38 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <ul class="links">
-            <li>
-                <a href="/projects">projects</a>
-            </li>
-            <li>
-                <a href="/ongoing-projects">ongoing projects</a>
-            </li>
-        </ul>
-    </div>
+    <section class="project-container">
+        <div class="btn-group">
+            <button data-project="ecommerce">[<span class="project-name">An E-commerce website</span>]</button>
+            <button data-project="ryanPortfolio">[<span class="project-name">Customised Art Portfolio</span>]</button>
+            <button data-project="italiaArt">[<span class="project-name">Customised Art Project</span>]</button>
+        </div>
+        <div class="content" id="ecommerce">
+            <p>
+                This a website made with Next.js v14, Stripe js and Zustand for the time being. 
+                Because of the attempt to move it to server-side rendered, the state managed by Zustand will be removed. 
+                The site is hosted on Vercel.
+            </p>
+            <a href="https://web-ecommerce-shop.vercel.app/" target="_blank" rel="noopener noreferrer">link</a>
+        </div>
+        <div class="content" id="ryanPortfolio">
+            <p>
+                This website uses React as the framework and Cloudinary as the CDN to store images of Ryan's works.
+                It is client-side rendered and uses SCSS for styling and Redux for state management.
+            </p>
+            <a href="https://lojunrui.com/" target="_blank" rel="noopener noreferrer">link</a>
+        </div>
+        <div class="content" id="italiaArt">
+            <p>
+                This is a static site made with plain HTML, CSS and JavaScript.
+                The effect is achieved by mounting and unmounting an array of preselected images by Italia. Opacity is used to control the fade-in-and-out effect. 
+                In addition, the carousel is infinite made with CSS.
+                The site is hosted on Render.
+            </p>
+            <a href="https://hcguirmehicogmhi45wuct98m4xf9cjhu8fhxmio.onrender.com" target="_blank" rel="noopener noreferrer">link</a>
+        </div>
+        <div class="mask"></div>
+    </section>
+    <script type="text/javascript" src="/index.js"></script>
 </body>
 </html>

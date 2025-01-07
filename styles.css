@@ -20,36 +20,15 @@ a:hover {
     font-style: italic;
 }
 
-.container {
-    display: block;
-    height: 100vh;
-}
-
-.links {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    list-style: none;
-    gap: 13.33vh;
-    font-size: 15vh;
-    font-weight: 900;
-    padding: 13.33vh 0;
-}
-
-@media (max-width: 768px) {
-    .links {
-        font-size: 10vh;
-    }
-}
-
 /* projects page */
 
 .btn-group {
     display: flex;
     flex-direction: column;
-    gap: 10vh;
+}
+
+.project-name:hover {
+    font-style: italic;
 }
 
 .content {
