@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --light-primary: #2563eb;
+  --light-background: #ffffff;
+  --light-text: #000000;
+  --light-border: #e5e7eb;
+  --light-switch: #1a1a1a;
+  /* red */
+  --light-sign-border: #ff000033;
+
+  --dark-primary: #60a5fa;
+  --dark-background: #1a1a1a;
+  --dark-text: #ffffff;
+  --dark-border: #374151;
+  --dark-switch: #ffffff;
+  /* neon green */
+  --dark-sign-border: #43ff64d9;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
