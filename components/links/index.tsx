@@ -12,7 +12,7 @@ export default function Links({ title }: { title: string }) {
           <div>&quot;your face looked like you&apos;d been erased &quot;</div>
         </a>
         <a href="https://heaven-chat.vercel.app/" target="_blank" rel="noopener noreferrer" className="w-fit ml-auto">
-          <div>Life AI</div>
+          <div>Masculinity AI</div>
         </a>
       </>
     case "Contact":
