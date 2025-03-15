@@ -39,7 +39,7 @@ export default function Links({ title, setProject }: { title: string, setProject
                   href={project.link} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="block text-right mt-2 text-xs text-gray-500 hover:text-gray-800"
+                  className="block text-right mt-2 text-xs text-blue-500"
                 >
                   Visit Project
                 </a>
