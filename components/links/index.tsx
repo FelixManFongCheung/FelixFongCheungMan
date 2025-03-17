@@ -1,10 +1,15 @@
 "use client"
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { data } from "@/data";
 
 export default function Links({ title, setProject }: { title: string, setProject: (project: string) => void }) {  
   const [activeProject, setActiveProject] = useState<string | null>(null);
+
+  useEffect(() => {
+    console.log(title);
+    setActiveProject(null);
+  }, [title])
 
   const handleProjectClick = (projectName: string) => {
     setActiveProject(activeProject === projectName ? null : projectName);
