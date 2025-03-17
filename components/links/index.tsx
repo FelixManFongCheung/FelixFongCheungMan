@@ -7,7 +7,6 @@ export default function Links({ title, setProject }: { title: string, setProject
   const [activeProject, setActiveProject] = useState<string | null>(null);
 
   useEffect(() => {
-    console.log(title);
     setActiveProject(null);
   }, [title])
 
