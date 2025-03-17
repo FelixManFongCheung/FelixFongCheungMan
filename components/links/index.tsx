@@ -26,7 +26,6 @@ export default function Links({ title, setProject }: { title: string, setProject
             >
               <div 
                 onClick={() => handleProjectClick(project.name)}
-                className="hover:text-gray-600 transition-colors"
               >
                 {project.name}
               </div>
