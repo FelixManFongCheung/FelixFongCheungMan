@@ -13,22 +13,29 @@ export default function Content({ title, project, setProject }: { title: string,
     switch (title) {
         case 'About':  
             return (
-                <div className="md:absolute md:h-full md:w-[40vw]">
+                <div className={`
+                    md:absolute 
+                    md:h-full 
+                    md:w-[40vw]
+                `}>
                     {data.about.intro}
                 </div>
             );
         case 'Projects': 
             return projectName ? (
                 <div className={`
-                    md:absolute 
                     fixed 
                     top-[calc(4rem+150px)] 
-                    transform -translate-y-1/2 
+                    left-1/2
+                    transform 
+                    -translate-y-1/2 
                     -translate-x-1/2 
                     text-center 
                     z-[99] 
                     backdrop-blur-lg 
                     ${projectName ? 'p-2' : ''}
+                    
+                    md:absolute 
                     md:h-full 
                     md:w-[40vw]
                     md:transform-none
@@ -37,8 +44,11 @@ export default function Content({ title, project, setProject }: { title: string,
                     md:text-left    
                     md:z-0         
                     md:backdrop-blur-none
+                    md:left-auto
                 `}>
-                    {data.projects.find(project => project.name === projectName)?.stack.map((stack) => (
+                    {data.projects.find(project => 
+                        project.name === projectName
+                    )?.stack.map((stack) => (
                         <div key={stack}>
                             [{stack}]
                         </div>

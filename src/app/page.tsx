@@ -20,7 +20,7 @@ export default function Home() {
       <div className="md:order-2 z-[99]">
         <Circle setTitle={setTitle} />
       </div>
-      <div className="flex flex-1 flex-col gap-4 md:h-full md:order-1">
+      <div className="relative w-full flex flex-1 flex-col gap-4 md:h-full md:order-1">
         <Content title={title} project={project} setProject={setProject} />
       </div>
       <div className="w-full flex flex-1 flex-col gap-[0.3rem] text-blue-500 underline order-3">
