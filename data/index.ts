@@ -2,6 +2,7 @@ interface projects {
   name: string;
   link: string;
   stack: string[];
+  previewVideo?: string;
 }
 
 interface contact {
@@ -48,7 +49,7 @@ export const data: {
     },
     {
       name: "Goach-AI",
-      link: "https://goach-ai.com/",
+      link: "https://dev.goach-ai.com/",
       stack: [
         "Next.js",
         "TypeScript",
@@ -58,6 +59,7 @@ export const data: {
         "React-Hook-Form",
         "Zustand",
       ],
+      previewVideo: "./assets/GoachAI.mp4",
     },
     {
       name: "Pike",
@@ -72,6 +74,7 @@ export const data: {
         "Tandstack-Query",
         "React-Hook-Form",
       ],
+      previewVideo: "./assets/Pike.mp4",
     },
     {
       name: "Themison",
