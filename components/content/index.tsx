@@ -74,7 +74,7 @@ export default function Content({
                     ${projectName ? "p-2" : ""}
                     
                     md:absolute 
-                    md:h-full 
+                    md:h-auto
                     md:w-[40vw]
                     md:transform-none
                     md:translate-x-0 
