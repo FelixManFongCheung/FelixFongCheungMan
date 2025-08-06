@@ -23,7 +23,7 @@ export default function Home() {
         className="absolute top-4 right-4 w-4 h-4 rounded-full bg-theme-light-switch dark:bg-theme-dark-switch"
         onClick={toggleTheme}
       ></button>
-      <div className="relative md:order-2 z-[99]">
+      <div className="w-screen md:w-auto relative md:order-2 z-[99]">
         <Preview project={project} />
         <Circle setTitle={setTitle} />
       </div>

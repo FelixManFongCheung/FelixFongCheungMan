@@ -94,3 +94,12 @@
     scrollbar-width: none;
   }
 }
+
+.translate-on-desktop {
+  @media (min-width: 600px) {
+    transform: translateX(-25%) translateY(calc(-100% / 18));
+  }
+  @media (max-width: 600px) {
+    transform: translateX(0) translateY(0);
+  }
+}
