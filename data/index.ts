@@ -65,16 +65,25 @@ export const data: {
       name: "Portfolio Website",
       link: "https://lojunrui.com/",
       stack: ["React", "Redux"],
+      previewVideo: "./assets/RyanPortfolio.mp4",
     },
     {
       name: "'your face looked like you'd been erased'",
       link: "https://hcguirmehicogmhi45wuct98m4xf9cjhu8fhxmio.onrender.com",
-      stack: ["Javascript"],
+      stack: ["HTML", "CSS", "Javascript"],
+      previewVideo: "./assets/'yourfacelookedlikeyou'dbeenerased'.mp4",
+    },
+    {
+      name: "#findyourtrinket",
+      link: "https://findyourtrinket.onrender.com",
+      stack: ["HTML", "CSS", "Javascript", "Vite"],
+      previewVideo: "./assets/findyourtrinket.mp4",
     },
     {
       name: "Masculinity AI",
       link: "https://heaven-chat.vercel.app/",
       stack: ["Next.js", "Deepseek", "TypeScript", "GSAP", "Tailwind"],
+      previewVideo: "./assets/MasculinityChat.mp4",
     },
     {
       name: "Themison",
