@@ -1,14 +1,20 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from 'react';
 import { data } from "@/data";
+import { useEffect, useState } from "react";
 
-export default function Links({ title, setProject }: { title: string, setProject: (project: string) => void }) {  
+export default function Links({
+  title,
+  setProject,
+}: {
+  title: string;
+  setProject: (project: string) => void;
+}) {
   const [activeProject, setActiveProject] = useState<string | null>(null);
 
   useEffect(() => {
     setActiveProject(null);
-  }, [title])
+  }, [title]);
 
   const handleProjectClick = (projectName: string) => {
     setActiveProject(activeProject === projectName ? null : projectName);
@@ -20,27 +26,33 @@ export default function Links({ title, setProject }: { title: string, setProject
       return (
         <>
           {data.projects.map((project) => (
-            <div 
-              key={project.name} 
+            <div
+              key={project.name}
               className="w-fit ml-auto cursor-pointer relative overflow-hidden"
             >
-              <div 
+              <div
+                className="text-right"
                 onClick={() => handleProjectClick(project.name)}
               >
                 {project.name}
               </div>
-              <div 
+              <div
                 className={`
                   transform
                   transition-all
                   duration-300
                   ease-in-out
-                  ${activeProject === project.name ? 'h-[30px] opacity-100' : 'h-0 opacity-0'}
+                  text-right
+                  ${
+                    activeProject === project.name
+                      ? "h-[30px] opacity-100"
+                      : "h-0 opacity-0"
+                  }
                 `}
               >
-                <a 
-                  href={project.link} 
-                  target="_blank" 
+                <a
+                  href={project.link}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="block text-right mt-2 text-xs text-blue-500"
                 >
@@ -50,7 +62,7 @@ export default function Links({ title, setProject }: { title: string, setProject
             </div>
           ))}
         </>
-      )
+      );
     case "Contact":
       return (
         <>
@@ -66,8 +78,8 @@ export default function Links({ title, setProject }: { title: string, setProject
             </a>
           ))}
         </>
-      )
+      );
     default:
-      return <div></div>
+      return <div></div>;
   }
 }
