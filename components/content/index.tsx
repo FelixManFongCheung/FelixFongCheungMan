@@ -1,5 +1,6 @@
 "use client";
 
+import { Separator } from "@/components/ui/separator";
 import { data } from "@/data";
 import { useEffect } from "react";
 
@@ -26,9 +27,40 @@ export default function Content({
                     md:absolute 
                     md:h-full 
                     md:w-[40vw]
+                    font-extrabold
+                    text-2xl
+                    md:overflow-y-auto
+                    md:no-scrollbar
                 `}
         >
-          {data.about.intro}
+          <div>{data.about.intro}</div>
+          <br />
+          <Separator />
+          <br />
+          <div>
+            {data.about.experience?.map((experience) => (
+              <>
+                <div key={`experience-${experience.title}`}>
+                  <div>{experience.title}</div>
+                  <div>[{experience.company}]</div>
+                  <div>{experience.period}</div>
+                  <div>{experience.description}</div>
+                </div>
+                <br />
+              </>
+            ))}
+          </div>
+          <br />
+          <Separator />
+          <br />
+          <div>
+            {data.about.skills?.map((skill) => (
+              <div key={`skill-${skill}`}>[{skill}]</div>
+            ))}
+          </div>
+          <div className="hidden md:block fixed bottom-10 left-10 w-10 h-10 truncate text-sm border border-theme-light-signBorder dark:border-theme-dark-signBorder">
+            <span>Scroll Down</span>
+          </div>
         </div>
       );
     case "Projects":
@@ -61,7 +93,7 @@ export default function Content({
           {data.projects
             .find((project) => project.name === projectName)
             ?.stack.map((stack) => (
-              <div key={stack}>[{stack}]</div>
+              <div key={`${projectName}-${stack}`}>[{stack}]</div>
             ))}
         </div>
       ) : null;
