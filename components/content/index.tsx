@@ -38,16 +38,14 @@ export default function Content({
           <Separator />
           <br />
           <div>
-            {data.about.experience?.map((experience) => (
-              <>
-                <div key={`experience-${experience.title}`}>
-                  <div>{experience.title}</div>
-                  <div>[{experience.company}]</div>
-                  <div>{experience.period}</div>
-                  <div>{experience.description}</div>
-                </div>
+            {data.about.experience?.map((experience, index) => (
+              <div key={`experience-${index}-${experience.title}`}>
+                <div>{experience.title}</div>
+                <div>[{experience.company}]</div>
+                <div>{experience.period}</div>
+                <div>{experience.description}</div>
                 <br />
-              </>
+              </div>
             ))}
           </div>
           <br />
@@ -89,8 +87,8 @@ export default function Content({
         >
           {data.projects
             .find((project) => project.name === projectName)
-            ?.stack.map((stack) => (
-              <div key={`${projectName}-${stack}`}>[{stack}]</div>
+            ?.stack.map((stack, index) => (
+              <div key={`${projectName}-${index}-${stack}`}>[{stack}]</div>
             ))}
         </div>
       ) : null;
