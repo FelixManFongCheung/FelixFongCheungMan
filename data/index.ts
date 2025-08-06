@@ -28,26 +28,6 @@ export const data: {
 } = {
   projects: [
     {
-      name: "E-commerce Portfolio",
-      link: "https://web-ecommerce-shop.vercel.app/",
-      stack: ["Next.js", "TypeScript", "SCSS", "Stripe"],
-    },
-    {
-      name: "Portfolio Website",
-      link: "https://lojunrui.com/",
-      stack: ["React", "Redux"],
-    },
-    {
-      name: "'your face looked like you'd been erased'",
-      link: "https://hcguirmehicogmhi45wuct98m4xf9cjhu8fhxmio.onrender.com",
-      stack: ["Javascript"],
-    },
-    {
-      name: "Masculinity AI",
-      link: "https://heaven-chat.vercel.app/",
-      stack: ["Next.js", "Deepseek", "TypeScript", "GSAP", "Tailwind"],
-    },
-    {
       name: "Goach-AI",
       link: "https://dev.goach-ai.com/",
       stack: [
@@ -75,6 +55,26 @@ export const data: {
         "React-Hook-Form",
       ],
       previewVideo: "./assets/Pike.mp4",
+    },
+    {
+      name: "E-commerce Portfolio",
+      link: "https://web-ecommerce-shop.vercel.app/",
+      stack: ["Next.js", "TypeScript", "SCSS", "Stripe"],
+    },
+    {
+      name: "Portfolio Website",
+      link: "https://lojunrui.com/",
+      stack: ["React", "Redux"],
+    },
+    {
+      name: "'your face looked like you'd been erased'",
+      link: "https://hcguirmehicogmhi45wuct98m4xf9cjhu8fhxmio.onrender.com",
+      stack: ["Javascript"],
+    },
+    {
+      name: "Masculinity AI",
+      link: "https://heaven-chat.vercel.app/",
+      stack: ["Next.js", "Deepseek", "TypeScript", "GSAP", "Tailwind"],
     },
     {
       name: "Themison",

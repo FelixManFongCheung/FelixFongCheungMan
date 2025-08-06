@@ -1,29 +1,40 @@
-"use client"
+"use client";
 
 import { data } from "@/data";
 import { useEffect } from "react";
 
-export default function Content({ title, project, setProject }: { title: string, project: string, setProject: (project: string) => void }) {
-    const projectName = project;
+export default function Content({
+  title,
+  project,
+  setProject,
+}: {
+  title: string;
+  project: string;
+  setProject: (project: string) => void;
+}) {
+  const projectName = project;
 
-    useEffect(() => {
-        setProject('')
-    }, [title, setProject])
-    
-    switch (title) {
-        case 'About':  
-            return (
-                <div className={`
+  useEffect(() => {
+    setProject("");
+  }, [title, setProject]);
+
+  switch (title) {
+    case "About":
+      return (
+        <div
+          className={`
                     md:absolute 
                     md:h-full 
                     md:w-[40vw]
-                `}>
-                    {data.about.intro}
-                </div>
-            );
-        case 'Projects': 
-            return projectName ? (
-                <div className={`
+                `}
+        >
+          {data.about.intro}
+        </div>
+      );
+    case "Projects":
+      return projectName ? (
+        <div
+          className={`
                     fixed 
                     top-[calc(4rem+150px)] 
                     left-1/2
@@ -33,7 +44,7 @@ export default function Content({ title, project, setProject }: { title: string,
                     text-center 
                     z-[99] 
                     backdrop-blur-lg 
-                    ${projectName ? 'p-2' : ''}
+                    ${projectName ? "p-2" : ""}
                     
                     md:absolute 
                     md:h-full 
@@ -45,17 +56,16 @@ export default function Content({ title, project, setProject }: { title: string,
                     md:z-0         
                     md:backdrop-blur-none
                     md:left-auto
-                `}>
-                    {data.projects.find(project => 
-                        project.name === projectName
-                    )?.stack.map((stack) => (
-                        <div key={stack}>
-                            [{stack}]
-                        </div>
-                    ))}
-                </div>
-            ) : null;
-        default:
-            return null;
-    }
+                `}
+        >
+          {data.projects
+            .find((project) => project.name === projectName)
+            ?.stack.map((stack) => (
+              <div key={stack}>[{stack}]</div>
+            ))}
+        </div>
+      ) : null;
+    default:
+      return null;
+  }
 }
