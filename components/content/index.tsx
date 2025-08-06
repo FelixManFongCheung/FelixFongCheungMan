@@ -58,9 +58,6 @@ export default function Content({
               <div key={`skill-${skill}`}>[{skill}]</div>
             ))}
           </div>
-          <div className="hidden md:block fixed bottom-10 left-10 w-10 h-10 truncate text-sm border border-theme-light-signBorder dark:border-theme-dark-signBorder">
-            <span>Scroll Down</span>
-          </div>
         </div>
       );
     case "Projects":
